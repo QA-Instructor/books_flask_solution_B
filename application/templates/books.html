@@ -1,0 +1,26 @@
+{% extends "base_html.html" %}
+{% block content %}
+<h1>View Book Details</h1>
+<ul>
+<!--  {% for book in books_list %}-->
+<!--      <li>{{ book}} </li>-->
+<!--    {% for k, v in book.items() %}-->
+<!--        <p>{{k}} {{ v}}</p>-->
+<!--    {% endfor %}-->
+<!--    {% endfor %}-->
+    <table>
+        <thead><td>View Details</td><td>ID</td><td>Title</td><td>Author</td><td>Edit</td></thead>
+      {% for book in books_list %}
+
+    <tr>
+                <td><a href="{{  url_for('book', book_id = book['ID']) }}">Book {{ book['ID'] }}</a></td>
+        <td>{{ book['ID'] }}</td>
+           <td>{{ book['Title'] }}</td>
+                   <td>{{ book['Author'] }}</td>
+                        <td><a href="{{  url_for('book_edit', book_id = book['ID']) }}">Edit {{ book['ID'] }}</a></td>
+    </tr>
+            {% endfor %}
+
+    </table>
+</ul>
+{% endblock %}

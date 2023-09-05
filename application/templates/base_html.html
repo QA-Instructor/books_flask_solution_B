@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+<!--    <link href="./static/styles.css" rel="stylesheet" />-->
+        <link href="{{ url_for('static', filename='main_styles.css')}}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="{{  url_for('home') }}">Home</a>&nbsp;
+        <a href="{{  url_for('books') }}">View Books</a>&nbsp;
+        <!-- <a href="{{  url_for('book', book_id = 1) }}">Book By ID</a>&nbsp; -->
+        <a href="{{  url_for('book_add') }}">Add Book</a>&nbsp;
+    </nav>
+      <img class="logo" src="{{ url_for('static', filename='/images/cutebooks.png') }}" alt="cute book people" />
+    <h1>{{ title }} Page</h1>
+  </header>
+  <section>
+    {% block content %}
+    {% endblock %}
+  </section>
+  <hr>
+  <footer>
+    <p>&copy; QA 2023</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+**/.git
+**/terraform
+
+Jenkinsfile
+.gitignore
+Dockerfile_simple
+Dockerfile_workshop
+venv/

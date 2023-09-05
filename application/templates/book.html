@@ -1,0 +1,12 @@
+{% extends "base_html.html" %}
+{% block content %}
+<ul>
+  <li><span class="label">ID: </span>{{ book_id }}</li>
+  <li><span class="label">Title: </span>{{ book_title }}</li>
+    <li><span class="label">Author: </span>{{ book_author }}</li>
+</ul>
+<br>
+<div class="small_image">
+       <img src="{{ url_for('static', filename='/images/yellowbook.jpg') }}" alt="yellow book" />
+</div>
+{% endblock %}

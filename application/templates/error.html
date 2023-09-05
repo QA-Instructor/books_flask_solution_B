@@ -1,0 +1,10 @@
+{% extends "base_html.html" %}
+{% block content %}
+<h1>{{ title }} Page</h1>
+<p>Well this is embarassing.</p>
+<div class="error_image">
+       <img src="{{ url_for('static', filename='/images/embarassedmonkey.jpg') }}" alt="monkey" />
+</div>
+
+<a href="{{  url_for('home') }}">Go back home</a>
+{% endblock %}
